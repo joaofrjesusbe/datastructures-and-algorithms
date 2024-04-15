@@ -13,5 +13,5 @@ It was adapted to use Swift instead of Javascript
 2. Arrays
 3. Hash Tables
 4. Linked Lists
-5. Stacks
+5. Stacks & Queues
 6. (in progress)
