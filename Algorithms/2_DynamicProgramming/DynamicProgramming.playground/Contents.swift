@@ -15,7 +15,7 @@ func memoize<Input: Hashable, Output>(_ function: @escaping (Input) -> Output) -
 }
 
 func recursiveMemoize<Input: Hashable, Output>(
-  _ function: @escaping ((Input) -> Output, Input) -> Output
+    _ function: @escaping ((Input) -> Output, Input) -> Output
 ) -> (Input) -> Output {
     // our item cache
     var storage = [Input: Output]()
@@ -24,16 +24,16 @@ func recursiveMemoize<Input: Hashable, Output>(
         if let cached = storage[input] {
             return cached
         }
-                let result = function(memo, input)
-                storage[input] = result
-                return result
+        let result = function(memo, input)
+        storage[input] = result
+        return result
     }
     return memo
 }
 
 func addTo80(_ n: Int) -> Int {
-  print("slow")
-  return n + 80
+    print("slow")
+    return n + 80
 }
 
 let memoizeAddTo80 = memoize(addTo80)
@@ -45,9 +45,9 @@ var slowCalculations = 0
 var dpCalculations = 0
 
 func fibonacci(_ number: Int) -> Int {
-  assert(number >= 0, "Input must be > 0")
-  slowCalculations += 1
-  return number < 2 ? number : fibonacci(number - 1) + fibonacci(number - 2)
+    assert(number >= 0, "Input must be > 0")
+    slowCalculations += 1
+    return number < 2 ? number : fibonacci(number - 1) + fibonacci(number - 2)
 }
 
 let memoizedFibonacci = recursiveMemoize { (fibonacci, number: Int) -> Int in
