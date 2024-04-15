@@ -9,9 +9,14 @@ It was adapted to use Swift instead of Javascript
 
 ## Contents
 
-1. Big O
-2. Arrays
-3. Hash Tables
-4. Linked Lists
-5. Stacks & Queues
-6. (in progress)
+- BigO
+
+Data structures:
+- Arrays
+- Hash Tables
+- Linked Lists
+- Stacks & Queues
+
+Algorithms:
+- Recursion
+- Dynamic Programming 
